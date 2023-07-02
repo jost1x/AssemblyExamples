@@ -1,0 +1,8 @@
+# Dist Files
+
+*.hex
+*.cof
+*.map
+*.o
+*.lst
+*.cod
