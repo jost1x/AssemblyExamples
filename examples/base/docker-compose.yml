@@ -1,0 +1,10 @@
+version: '3'
+services:
+  compiler:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/app/src
+      - ./dist:/app/dist
+    command: sh -c 'gpasm -c -I /app/src -o /app/dist/main /app/src/main.asm && gplink -m -c -o /app/dist/main.cof /app/dist/main.o'
